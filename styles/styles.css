@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.main-block {
+  height: 569px;
+  padding: 120px 0 122px 0;
+}
+
+.title {
+  color: #383838;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 40px;
+}
+
+.highlight {
+  width: 100px;
+  height: 4px;
+  background-color: #f5bd41;
+  margin: 0 auto 80px;
+}
+
+.four-icons {
+  text-align: center;
+}
+
+.icon-block {
+  width: 296px;
+  display: inline-block;
+  text-align: center;
+  font-size: 24px;
+  color: #383838;
+  margin: 0 8px 0 8px;
+}
+
+img {
+  margin-bottom: 48px;
+}
