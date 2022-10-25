@@ -1,0 +1,88 @@
+@import url("./fonts.css");
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  padding: 120px 100px;
+  max-width: 1230px;
+  margin: 0 auto;
+}
+
+.four-icons {
+  display: flex;
+  gap: 16px;
+}
+
+.icon-block {
+  width: 25%;
+  text-align: center;
+}
+
+.icon {
+  margin-bottom: 48px;
+}
+
+.icon-text {
+  font-size: 24px;
+  font-weight: 400;
+  color: #383838;
+}
+
+.highlight {
+  width: 100px;
+  height: 4px;
+  background-color: #f5bd41;
+  margin: 0 auto 80px;
+  border-style: none;
+}
+
+.title {
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 500;
+  color: #383838;
+}
+
+.footer {
+  background-color: #10367c;
+}
+
+.footer-lists {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-lists ul {
+  margin-bottom: 64px;
+  list-style: none;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 20px;
+  padding-left: 0;
+}
+
+.footer-lists ul li {
+  margin-bottom: 24px;
+}
+
+ul li:last-child {
+  margin-bottom: 0;
+}
+
+.copyright {
+  font-weight: 400;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+ul li:first-child {
+  font-weight: 500;
+}
