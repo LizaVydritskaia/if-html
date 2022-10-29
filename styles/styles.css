@@ -10,9 +10,193 @@ body {
 }
 
 .container {
-  padding: 120px 100px;
+  padding: 120px 0;
   max-width: 1230px;
-  margin: 0 auto;
+  margin: 0 100px;
+}
+
+.container__padding {
+  padding-top: 200px;
+  position: relative;
+}
+
+.header {
+  margin: 0 100px;
+  padding-top: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.top-section {
+  min-width: 100vh;
+  background-image: url("../images/castelmezzano-1979546 1.jpg");
+  background-repeat: no-repeat;
+}
+
+h1 {
+  font-weight: 500;
+  font-size: 50px;
+  line-height: 59px;
+  color: #ffffff;
+  margin-bottom: 145px;
+}
+
+.header__items {
+  display: flex;
+  gap: 48px;
+}
+
+.header__stays-attractions {
+  display: flex;
+  gap: 24px;
+}
+
+.header__icons {
+  display: flex;
+  gap: 24px;
+}
+
+.header-sprite {
+  background-image: url("../images/header-sprite.png");
+}
+
+.header__logo {
+  width: 205px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.header__night {
+  width: 30px;
+  background-repeat: no-repeat;
+  background-position: -205px 0;
+}
+
+.header__account {
+  width: 40px;
+  background-repeat: no-repeat;
+  background-position: -235px 0;
+}
+
+.header__stays {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+.header__stays-style {
+  font-weight: 400;
+  font-size: 24px;
+  color: #ffffff;
+}
+
+.header__stays__line {
+  width: 50px;
+  height: 4px;
+  background-color: #f5bd41;
+  border-style: none;
+}
+
+.header__attractions {
+  font-weight: 400;
+  font-size: 24px;
+  color: #ffffff;
+}
+
+.top-section__label-destination {
+  font-weight: 400;
+  font-size: 18px;
+  color: #ffffff;
+  position: absolute;
+  bottom: 368px;
+  left: 28px;
+}
+
+.top-section__label-date {
+  font-weight: 400;
+  font-size: 18px;
+  color: #ffffff;
+  position: absolute;
+  bottom: 368px;
+  left: 380px;
+}
+
+.top-section__form {
+  max-width: 1232px;
+  height: 64px;
+  background-color: #ffffff;
+  border: 3px solid #f3f3f4;
+  border-radius: 8px;
+  margin-bottom: 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-section__destination {
+  border: none;
+  height: 64px;
+  font-weight: 400;
+  font-size: 18px;
+  color: #383838;
+  flex-grow: 1;
+  margin-left: 24px;
+}
+
+.top-section__date {
+  width: 259px;
+  height: 64px;
+  font-weight: 400;
+  font-size: 18px;
+  text-align: center;
+  color: #383838;
+  border: 3px solid #f5bd41;
+  border-radius: 8px;
+}
+
+.top-section__room {
+  border: none;
+  height: 64px;
+  font-weight: 400;
+  font-size: 18px;
+  color: #383838;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.top-section__button {
+  width: 192px;
+  height: 64px;
+  background-color: #3077c6;
+  border-radius: 8px;
+  border: none;
+  font-weight: 500;
+  font-size: 24px;
+  color: #ffffff;
+  margin: 0;
+}
+
+.container__apps {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.container-sprite {
+  background-image: url("../images/container-sprite.png");
+}
+
+.container__google-play {
+  width: 135px;
+  height: 40px;
+  background-position: 0 0;
+}
+
+.container__app-store {
+  width: 120px;
+  height: 40px;
+  background-position: -135px 0;
 }
 
 .four-icons {
