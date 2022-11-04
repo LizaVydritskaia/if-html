@@ -9,36 +9,40 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+.svg-sprite {
+  position: absolute;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
 .container {
-  padding: 120px 0;
-  max-width: 1230px;
-  margin: 0 100px;
+  max-width: 1264px;
+  padding: 0 16px;
+  margin: 0 auto;
 }
 
-.container__padding {
+.top-section__container {
   padding-top: 200px;
-  position: relative;
-}
-
-.header {
-  margin: 0 100px;
-  padding-top: 50px;
-  display: flex;
-  justify-content: space-between;
 }
 
 .top-section {
   min-width: 100vh;
-  background-image: url("../images/castelmezzano-1979546 1.jpg");
+  background-image: url("../images/background-castelmezzano.jpg");
   background-repeat: no-repeat;
+  background-size: 100%;
 }
 
-h1 {
-  font-weight: 500;
-  font-size: 50px;
-  line-height: 59px;
-  color: #ffffff;
-  margin-bottom: 145px;
+.header {
+  padding-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo {
+  width: 205px;
+  height: 40px;
 }
 
 .header__items {
@@ -48,54 +52,26 @@ h1 {
 
 .header__stays-attractions {
   display: flex;
+  justify-content: space-between;
   gap: 24px;
-}
-
-.header__icons {
-  display: flex;
-  gap: 24px;
-}
-
-.header-sprite {
-  background-image: url("../images/header-sprite.png");
-}
-
-.header__logo {
-  width: 205px;
-  background-repeat: no-repeat;
-  background-position: 0 0;
-}
-
-.header__night {
-  width: 30px;
-  background-repeat: no-repeat;
-  background-position: -205px 0;
-}
-
-.header__account {
-  width: 40px;
-  background-repeat: no-repeat;
-  background-position: -235px 0;
+  align-items: center;
+  position: relative;
 }
 
 .header__stays {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  align-items: center;
-}
-
-.header__stays-style {
   font-weight: 400;
   font-size: 24px;
   color: #ffffff;
 }
 
-.header__stays__line {
+.header__stays-line {
   width: 50px;
   height: 4px;
   background-color: #f5bd41;
   border-style: none;
+  position: absolute;
+  left: 5px;
+  bottom: -6px;
 }
 
 .header__attractions {
@@ -104,22 +80,28 @@ h1 {
   color: #ffffff;
 }
 
-.top-section__label-destination {
-  font-weight: 400;
-  font-size: 18px;
-  color: #ffffff;
-  position: absolute;
-  bottom: 368px;
-  left: 28px;
+.header__night-account {
+  display: flex;
+  gap: 24px;
+  align-items: center;
 }
 
-.top-section__label-date {
-  font-weight: 400;
-  font-size: 18px;
+.header__night {
+  width: 30px;
+  height: 30px;
+}
+
+.header__account {
+  width: 40px;
+  height: 40px;
+}
+
+.top-section__title {
+  font-weight: 500;
+  font-size: 50px;
+  line-height: 59px;
   color: #ffffff;
-  position: absolute;
-  bottom: 368px;
-  left: 380px;
+  margin-bottom: 145px;
 }
 
 .top-section__form {
@@ -132,20 +114,44 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 
-.top-section__destination {
-  border: none;
+.top-section__label-destination {
+  font-weight: 400;
+  font-size: 18px;
+  color: #ffffff;
+  position: absolute;
+  top: -49px;
+  left: 24px;
+}
+
+.top-section__input-destination {
+  width: 37%;
   height: 64px;
   font-weight: 400;
   font-size: 18px;
   color: #383838;
-  flex-grow: 1;
+  border: none;
   margin-left: 24px;
 }
 
 .top-section__date {
-  width: 259px;
+  width: 22%;
+  position: relative;
+}
+
+.top-section__label-date {
+  font-weight: 400;
+  font-size: 18px;
+  color: #ffffff;
+  position: absolute;
+  top: -46px;
+  left: 20px;
+}
+
+.top-section__input-date {
+  width: 100%;
   height: 64px;
   font-weight: 400;
   font-size: 18px;
@@ -155,14 +161,26 @@ h1 {
   border-radius: 8px;
 }
 
-.top-section__room {
-  border: none;
+.top-section__input-room {
+  width: 27%;
   height: 64px;
   font-weight: 400;
   font-size: 18px;
   color: #383838;
   text-align: center;
-  flex-grow: 1;
+  border: none;
+}
+
+.top-section__input-destination:focus {
+  outline: none;
+}
+
+.top-section__input-date:focus {
+  outline: none;
+}
+
+.top-section__input-room:focus {
+  outline: none;
 }
 
 .top-section__button {
@@ -174,60 +192,27 @@ h1 {
   font-weight: 500;
   font-size: 24px;
   color: #ffffff;
-  margin: 0;
 }
 
-.container__apps {
+.top-section__apps {
   display: flex;
   justify-content: center;
   gap: 16px;
+  padding-bottom: 120px;
 }
 
-.container-sprite {
-  background-image: url("../images/container-sprite.png");
-}
-
-.container__google-play {
+.top-section__apps--google-play {
   width: 135px;
   height: 40px;
-  background-position: 0 0;
 }
 
-.container__app-store {
+.top-section__apps--app-store {
   width: 120px;
   height: 40px;
-  background-position: -135px 0;
 }
 
-.four-icons {
-  display: flex;
-  gap: 16px;
-}
-
-.icon-block {
-  width: 25%;
-  text-align: center;
-}
-
-.icon {
-  margin-bottom: 48px;
-}
-
-.icon-text {
-  font-size: 24px;
-  font-weight: 400;
-  color: #383838;
-}
-
-.highlight {
-  width: 100px;
-  height: 4px;
-  background-color: #f5bd41;
-  margin: 0 auto 80px;
-  border-style: none;
-}
-
-.title {
+.offer__title {
+  margin-top: 120px;
   margin-bottom: 20px;
   text-align: center;
   font-size: 40px;
@@ -235,25 +220,78 @@ h1 {
   color: #383838;
 }
 
+.offer__highlight {
+  width: 100px;
+  height: 4px;
+  background-color: #f5bd41;
+  margin: 0 auto 80px;
+  border-style: none;
+}
+
+.offer__icons {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 120px;
+}
+
+.offer__icon-block {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.offer__icon-block--icon {
+  margin-bottom: 48px;
+}
+
+.offer__icon-block--icon-support {
+  width: 75px;
+  height: 91.67px;
+}
+
+.offer__icon-block--icon-communicate {
+  width: 83.33px;
+  height: 83.33px;
+}
+
+.offer__icon-block--icon-booking {
+  width: 100px;
+  height: 66.67px;
+}
+
+.offer__icon-block--icon-reviews {
+  width: 91.67px;
+  height: 83.33px;
+}
+
+.offer__icon-block--text {
+  font-size: 24px;
+  font-weight: 400;
+  color: #383838;
+}
+
 .footer {
   background-color: #10367c;
 }
 
-.footer-lists {
+.footer__lists {
   display: flex;
-  justify-content: space-between;
+  padding-top: 120px;
 }
 
-.footer-lists ul {
-  margin-bottom: 64px;
+.footer__lists ul {
+  width: 33.333333%;
   list-style: none;
   color: #ffffff;
   font-weight: 400;
   font-size: 20px;
+  margin-bottom: 64px;
   padding-left: 0;
 }
 
-.footer-lists ul li {
+.footer__lists ul li {
   margin-bottom: 24px;
 }
 
@@ -261,12 +299,13 @@ ul li:last-child {
   margin-bottom: 0;
 }
 
-.copyright {
+ul li:first-child {
+  font-weight: 500;
+}
+
+.footer__copyright {
   font-weight: 400;
   font-size: 14px;
   color: #ffffff;
-}
-
-ul li:first-child {
-  font-weight: 500;
+  padding-bottom: 120px;
 }
