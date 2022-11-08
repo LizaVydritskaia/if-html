@@ -311,22 +311,22 @@ body {
 
 .offer__icon-block--icon-support {
   width: 75px;
-  height: 91.67px;
+  height: 92px;
 }
 
 .offer__icon-block--icon-communicate {
-  width: 83.33px;
-  height: 83.33px;
+  width: 83px;
+  height: 83px;
 }
 
 .offer__icon-block--icon-booking {
   width: 100px;
-  height: 66.67px;
+  height: 67px;
 }
 
 .offer__icon-block--icon-reviews {
-  width: 91.67px;
-  height: 83.33px;
+  width: 92px;
+  height: 83px;
 }
 
 .offer__icon-block--text {
@@ -548,23 +548,23 @@ ul li:first-child {
   }
 
   .offer__icon-block--icon-support {
-    width: 52.5px;
-    height: 64.17px;
+    width: 53px;
+    height: 64px;
   }
 
   .offer__icon-block--icon-communicate {
-    width: 58.33px;
-    height: 58.33px;
+    width: 58px;
+    height: 58px;
   }
 
   .offer__icon-block--icon-booking {
     width: 70px;
-    height: 46.67px;
+    height: 47px;
   }
 
   .offer__icon-block--icon-reviews {
-    width: 64.17px;
-    height: 58.33px;
+    width: 64px;
+    height: 58px;
   }
 
   .offer__icon-block--text {
