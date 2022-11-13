@@ -155,6 +155,11 @@ body {
   height: 40px;
 }
 
+.header__menu {
+  width: 0;
+  height: 0;
+}
+
 .top-section__title {
   font-weight: 500;
   font-size: 50px;
@@ -168,12 +173,18 @@ body {
   height: 64px;
   background-color: #ffffff;
   border: 3px solid #f3f3f4;
+  border-right-width: 0;
   border-radius: 8px;
   margin-bottom: 120px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: relative;
+}
+
+.top-section__search-icon {
+  width: 0;
+  height: 0;
 }
 
 .top-section__label-destination {
@@ -188,54 +199,189 @@ body {
 .top-section__input-destination {
   width: 37%;
   height: 64px;
-  font-weight: 400;
-  font-size: 18px;
-  color: var(--text-primary-color);
   border: none;
-  margin-left: 24px;
+  padding-left: 24px;
 }
 
-.top-section__date {
-  width: 22%;
-  position: relative;
-}
-
-.top-section__label-date {
-  font-weight: 400;
-  font-size: 18px;
-  color: var(--text-secondary-color);
-  position: absolute;
-  top: -46px;
-  left: 20px;
-}
-
-.top-section__input-date {
-  width: 100%;
-  height: 64px;
-  font-weight: 400;
-  font-size: 18px;
-  text-align: center;
-  color: var(--text-primary-color);
-  border: 3px solid #f5bd41;
-  border-radius: 8px;
-}
-
-.top-section__input-room {
-  width: 27%;
-  height: 64px;
+.top-section__input-destination::placeholder {
   font-weight: 400;
   font-size: 18px;
   color: var(--text-primary-color);
-  text-align: center;
-  border: none;
 }
 
 .top-section__input-destination:focus {
   outline: none;
 }
 
-.top-section__input-date:focus {
+.top-section__date {
+  width: 22%;
+  display: flex;
+  position: relative;
+}
+
+.top-section__label-check-in {
+  font-weight: 400;
+  font-size: 18px;
+  color: var(--text-secondary-color);
+  position: absolute;
+  top: -40px;
+  left: 20px;
+}
+
+.top-section__label-check-in span {
+  padding: 0 6px;
+}
+
+.top-section__input-check-in {
+  width: 50%;
+  height: 64px;
+  border: 3px solid #f5bd41;
+  border-right-width: 0;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.top-section__input-check-in::placeholder {
+  font-weight: 400;
+  font-size: 18px;
+  color: var(--text-primary-color);
+  text-align: right;
+}
+
+.top-section__input-check-in:focus {
   outline: none;
+}
+
+.top-section__label-check-out {
+  font-weight: 400;
+  font-size: 18px;
+  color: var(--text-secondary-color);
+  position: absolute;
+  top: -40px;
+  right: 62px;
+}
+
+.top-section__input-check-out {
+  width: 50%;
+  height: 64px;
+  border: 3px solid #f5bd41;
+  border-left-width: 0;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.top-section__input-check-out::placeholder {
+  font-weight: 400;
+  font-size: 18px;
+  color: var(--text-primary-color);
+}
+
+.top-section__input-check-out:focus {
+  outline: none;
+}
+
+.top-section__input-date-dash {
+  font-weight: 400;
+  font-size: 18px;
+  color: var(--text-primary-color);
+  padding: 18px 6px;
+  border-top: 3px solid #f5bd41;
+  border-bottom: 3px solid #f5bd41;
+}
+
+.top-section__room {
+  width: 27%;
+  display: flex;
+  position: relative;
+}
+
+.top-section__input-room-dash {
+  font-weight: 400;
+  font-size: 18px;
+  color: var(--text-primary-color);
+  padding: 21px 6px;
+}
+
+.top-section__label-adults {
+  font-weight: 400;
+  font-size: 18px;
+  color: var(--text-primary-color);
+  position: absolute;
+  left: 40px;
+  top: 21px;
+}
+
+.top-section__input-adults {
+  width: 33.33333%;
+  height: 64px;
+  border: none;
+  padding-left: 24px;
+}
+
+.top-section__input-adults::placeholder {
+  font-weight: 400;
+  font-size: 18px;
+  color: var(--text-primary-color);
+}
+
+.top-section__input-adults:focus {
+  outline: none;
+}
+
+.top-section__line-left {
+  width: 0;
+  height: 0;
+}
+
+.top-section__line-right {
+  width: 0;
+  height: 0;
+}
+
+.top-section__label-children {
+  font-weight: 400;
+  font-size: 18px;
+  color: var(--text-primary-color);
+  position: absolute;
+  left: 140px;
+  top: 21px;
+}
+
+.top-section__input-children {
+  width: 33.33333%;
+  height: 64px;
+  border: none;
+}
+
+.top-section__input-children::placeholder {
+  font-weight: 400;
+  font-size: 18px;
+  color: var(--text-primary-color);
+}
+
+.top-section__input-children:focus {
+  outline: none;
+}
+
+.top-section__label-room {
+  font-weight: 400;
+  font-size: 18px;
+  color: var(--text-primary-color);
+  position: absolute;
+  right: 24px;
+  top: 21px;
+}
+
+.top-section__input-room {
+  width: 33.33333%;
+  height: 64px;
+  border: none;
+}
+
+.top-section__input-room::placeholder {
+  font-weight: 400;
+  font-size: 18px;
+  color: var(--text-primary-color);
 }
 
 .top-section__input-room:focus {
@@ -430,6 +576,260 @@ ul li:first-child {
     max-width: 768px;
   }
 
+  .top-section__container {
+    padding-top: 100px;
+  }
+
+  .top-section {
+    background-size: cover;
+    background-position: top right;
+  }
+
+  .header {
+    padding-top: 20px;
+  }
+
+  .header__logo {
+    width: 150px;
+    height: 29px;
+  }
+
+  .header__stays {
+    font-size: 18px;
+  }
+
+  .header__stays-line {
+    width: 35px;
+    height: 3px;
+  }
+
+  .header__attractions {
+    font-size: 18px;
+  }
+
+  /*.header__night-account {*/
+  /*  gap: 16px;*/
+  /*}*/
+
+  .header__night {
+    width: 24px;
+    height: 24px;
+  }
+
+  .header__account {
+    width: 32px;
+    height: 32px;
+  }
+
+  .header__menu {
+    width: 0;
+    height: 0;
+  }
+
+  .top-section__title {
+    font-size: 40px;
+    margin-bottom: 50px;
+  }
+
+  .top-section__form {
+    max-width: 768px;
+    height: 232px;
+    background-color: #f5bd41;
+    border: 4px solid #f5bd41;
+    border-radius: 0;
+    margin-bottom: 50px;
+    flex-direction: column;
+    gap: 8px;
+    padding: 4px;
+  }
+
+  .top-section__search-icon {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    left: 16px;
+    top: 20px;
+  }
+
+  .top-section__label-destination {
+    font-weight: 500;
+    font-size: 15px;
+    color: var(--text-primary-color);
+    left: 40px;
+    top: 20px;
+  }
+
+  .top-section__input-destination {
+    width: 100%;
+    font-weight: 400;
+    font-size: 18px;
+    color: var(--text-primary-color);
+    border-radius: 4px;
+    margin-left: 0;
+  }
+
+  .top-section__input-destination::placeholder {
+    color: var(--text-secondary-color);
+  }
+
+  .top-section__date {
+    width: 100%;
+    display: flex;
+    gap: 8px;
+  }
+
+  .top-section__input-date-dash {
+    display: none;
+  }
+
+  .top-section__label-check-in {
+    font-size: 12px;
+    color: var(--text-primary-color);
+    position: absolute;
+    left: 8px;
+    top: 6px;
+    z-index: 1;
+  }
+
+  .top-section__label-check-in span {
+    display: none;
+  }
+
+  .top-section__input-check-in {
+    width: 50%;
+    height: 48px;
+    border: none;
+    border-radius: 4px;
+  }
+
+  .top-section__input-check-in::placeholder {
+    font-weight: 500;
+    font-size: 15px;
+    position: absolute;
+    left: 8px;
+    bottom: 6px;
+  }
+
+  .top-section__label-check-out {
+    font-size: 12px;
+    color: var(--text-primary-color);
+    position: absolute;
+    right: 293px;
+    top: 6px;
+  }
+
+  .top-section__input-check-out {
+    width: 50%;
+    height: 48px;
+    border: none;
+    border-radius: 4px;
+  }
+
+  .top-section__input-check-out::placeholder {
+    font-weight: 500;
+    font-size: 15px;
+    position: absolute;
+    left: 8px;
+    bottom: 6px;
+  }
+
+  .top-section__room {
+    width: 100%;
+  }
+
+  .top-section__input-room-dash {
+    display: none;
+  }
+
+  .top-section__label-adults {
+    font-size: 12px;
+    position: absolute;
+    left: 8px;
+    top: 6px;
+  }
+
+  .top-section__input-adults {
+    width: 33.33333%;
+    height: 48px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    padding-left: 8px;
+    padding-top: 24px;
+  }
+
+  .top-section__input-adults::placeholder {
+    font-weight: 500;
+    font-size: 15px;
+  }
+
+  .top-section__line-left {
+    width: 1px;
+    height: 32px;
+    background-color: #bfbfbf;
+    position: absolute;
+    left: 240px;
+    top: 8px;
+  }
+
+  .top-section__line-right {
+    width: 1px;
+    height: 32px;
+    background-color: #bfbfbf;
+    position: absolute;
+    right: 240px;
+    top: 8px;
+  }
+
+  .top-section__label-children {
+    font-size: 12px;
+    position: absolute;
+    left: 248px;
+    top: 6px;
+  }
+
+  .top-section__input-children {
+    width: 33.33333%;
+    height: 48px;
+    padding-left: 8px;
+    padding-top: 24px;
+  }
+
+  .top-section__input-children::placeholder {
+    font-weight: 500;
+    font-size: 15px;
+  }
+
+  .top-section__label-room {
+    font-size: 12px;
+    position: absolute;
+    right: 198px;
+    top: 6px;
+  }
+
+  .top-section__input-room {
+    width: 33.33333%;
+    height: 48px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    padding-left: 8px;
+    padding-top: 24px;
+  }
+
+  .top-section__input-room::placeholder {
+    font-weight: 500;
+    font-size: 15px;
+  }
+
+  .top-section__button {
+    width: 100%;
+    border-radius: 4px;
+    font-size: 19px;
+  }
+
+  .top-section__apps {
+    padding-bottom: 50px;
+  }
+
   .offer__title {
     margin-top: 50px;
     font-size: 32px;
@@ -520,6 +920,260 @@ ul li:first-child {
 
   .container {
     max-width: 360px;
+  }
+
+  .top-section__container {
+    padding-top: 50px;
+  }
+
+  .top-section {
+    background-size: cover;
+    background-position: top right;
+  }
+
+  .header {
+    padding-top: 12px;
+  }
+
+  .header__logo {
+    width: 122px;
+    height: 24px;
+  }
+
+  .header__stays {
+    display: none;
+  }
+
+  .header__stays-line {
+    display: none;
+  }
+
+  .header__attractions {
+    display: none;
+  }
+
+  .header__night-account {
+    gap: 16px;
+  }
+
+  .header__night {
+    width: 16px;
+    height: 16px;
+  }
+
+  .header__account {
+    width: 24px;
+    height: 24px;
+  }
+
+  .header__menu {
+    width: 24px;
+    height: 16px;
+  }
+
+  .top-section__title {
+    font-size: 30px;
+    line-height: 35px;
+    margin-bottom: 30px;
+  }
+
+  .top-section__form {
+    max-width: 328px;
+    height: 232px;
+    background-color: #f5bd41;
+    border: 4px solid #f5bd41;
+    border-radius: 0;
+    margin-bottom: 32px;
+    flex-direction: column;
+    gap: 8px;
+    padding: 4px;
+  }
+
+  .top-section__search-icon {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    left: 16px;
+    top: 20px;
+  }
+
+  .top-section__label-destination {
+    font-weight: 500;
+    font-size: 15px;
+    color: var(--text-primary-color);
+    left: 40px;
+    top: 20px;
+  }
+
+  .top-section__input-destination {
+    width: 100%;
+    font-weight: 400;
+    font-size: 18px;
+    color: var(--text-primary-color);
+    border-radius: 4px;
+    margin-left: 0;
+  }
+
+  .top-section__input-destination::placeholder {
+    color: var(--text-secondary-color);
+  }
+
+  .top-section__date {
+    width: 100%;
+    display: flex;
+    gap: 8px;
+  }
+
+  .top-section__input-date-dash {
+    display: none;
+  }
+
+  .top-section__label-check-in {
+    font-size: 12px;
+    color: var(--text-primary-color);
+    position: absolute;
+    left: 8px;
+    top: 6px;
+    z-index: 1;
+  }
+
+  .top-section__label-check-in span {
+    display: none;
+  }
+
+  .top-section__input-check-in {
+    width: 50%;
+    height: 48px;
+    border: none;
+    border-radius: 4px;
+  }
+
+  .top-section__input-check-in::placeholder {
+    font-weight: 500;
+    font-size: 15px;
+    position: absolute;
+    left: 8px;
+    bottom: 6px;
+  }
+
+  .top-section__label-check-out {
+    font-size: 12px;
+    color: var(--text-primary-color);
+    position: absolute;
+    right: 90px;
+    top: 6px;
+  }
+
+  .top-section__input-check-out {
+    width: 50%;
+    height: 48px;
+    border: none;
+    border-radius: 4px;
+  }
+
+  .top-section__input-check-out::placeholder {
+    font-weight: 500;
+    font-size: 15px;
+    position: absolute;
+    left: 8px;
+    bottom: 6px;
+  }
+
+  .top-section__room {
+    width: 100%;
+  }
+
+  .top-section__input-room-dash {
+    display: none;
+  }
+
+  .top-section__label-adults {
+    font-size: 12px;
+    position: absolute;
+    left: 8px;
+    top: 6px;
+  }
+
+  .top-section__input-adults {
+    width: 33.33333%;
+    height: 48px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    padding-left: 8px;
+    padding-top: 24px;
+  }
+
+  .top-section__input-adults::placeholder {
+    font-weight: 500;
+    font-size: 15px;
+  }
+
+  .top-section__line-left {
+    width: 1px;
+    height: 32px;
+    background-color: #bfbfbf;
+    position: absolute;
+    left: 104px;
+    top: 8px;
+  }
+
+  .top-section__line-right {
+    width: 1px;
+    height: 32px;
+    background-color: #bfbfbf;
+    position: absolute;
+    right: 104px;
+    top: 8px;
+  }
+
+  .top-section__label-children {
+    font-size: 12px;
+    position: absolute;
+    left: 112px;
+    top: 6px;
+  }
+
+  .top-section__input-children {
+    width: 33.33333%;
+    height: 48px;
+    padding-left: 8px;
+    padding-top: 24px;
+  }
+
+  .top-section__input-children::placeholder {
+    font-weight: 500;
+    font-size: 15px;
+  }
+
+  .top-section__label-room {
+    font-size: 12px;
+    position: absolute;
+    right: 65px;
+    top: 6px;
+  }
+
+  .top-section__input-room {
+    width: 33.33333%;
+    height: 48px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    padding-left: 8px;
+    padding-top: 24px;
+  }
+
+  .top-section__input-room::placeholder {
+    font-weight: 500;
+    font-size: 15px;
+  }
+
+  .top-section__button {
+    width: 100%;
+    border-radius: 4px;
+    font-size: 19px;
+  }
+
+  .top-section__apps {
+    padding-bottom: 40px;
   }
 
   .offer__title {
