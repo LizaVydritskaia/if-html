@@ -3,6 +3,7 @@
 :root {
   --text-primary-color: #383838;
   --text-secondary-color: #ffffff;
+  --accent-yellow: #f5bd41;
   --col-width: calc(100% / 12);
 }
 
@@ -126,7 +127,7 @@ body {
 .header__stays-line {
   width: 50px;
   height: 4px;
-  background-color: #f5bd41;
+  background-color: var(--accent-yellow);
   border-style: none;
   position: absolute;
   left: 5px;
@@ -216,6 +217,10 @@ body {
 .top-section__date {
   width: 22%;
   display: flex;
+}
+
+.top-section__check-in {
+  width: 50%;
   position: relative;
 }
 
@@ -225,7 +230,7 @@ body {
   color: var(--text-secondary-color);
   position: absolute;
   top: -40px;
-  left: 20px;
+  left: 19px;
 }
 
 .top-section__label-check-in span {
@@ -233,9 +238,9 @@ body {
 }
 
 .top-section__input-check-in {
-  width: 50%;
+  width: 100%;
   height: 64px;
-  border: 3px solid #f5bd41;
+  border: 3px solid var(--accent-yellow);
   border-right-width: 0;
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
@@ -252,19 +257,24 @@ body {
   outline: none;
 }
 
+.top-section__check-out {
+  width: 50%;
+  position: relative;
+}
+
 .top-section__label-check-out {
   font-weight: 400;
   font-size: 18px;
   color: var(--text-secondary-color);
   position: absolute;
   top: -40px;
-  right: 62px;
+  left: -8px;
 }
 
 .top-section__input-check-out {
-  width: 50%;
+  width: 100%;
   height: 64px;
-  border: 3px solid #f5bd41;
+  border: 3px solid var(--accent-yellow);
   border-left-width: 0;
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
@@ -285,8 +295,8 @@ body {
   font-size: 18px;
   color: var(--text-primary-color);
   padding: 18px 6px;
-  border-top: 3px solid #f5bd41;
-  border-bottom: 3px solid #f5bd41;
+  border-top: 3px solid var(--accent-yellow);
+  border-bottom: 3px solid var(--accent-yellow);
 }
 
 .top-section__room {
@@ -312,7 +322,7 @@ body {
 }
 
 .top-section__input-adults {
-  width: 33.33333%;
+  width: 34%;
   height: 64px;
   border: none;
   padding-left: 24px;
@@ -328,14 +338,14 @@ body {
   outline: none;
 }
 
-.top-section__line-left {
+.top-section__line {
   width: 0;
   height: 0;
 }
 
-.top-section__line-right {
-  width: 0;
-  height: 0;
+.top-section__children {
+  width: 33%;
+  position: relative;
 }
 
 .top-section__label-children {
@@ -343,24 +353,29 @@ body {
   font-size: 18px;
   color: var(--text-primary-color);
   position: absolute;
-  left: 140px;
+  left: 18px;
   top: 21px;
 }
 
-.top-section__input-children {
-  width: 33.33333%;
+.top-section__input-children-room {
+  width: 100%;
   height: 64px;
   border: none;
 }
 
-.top-section__input-children::placeholder {
+.top-section__input-children-room::placeholder {
   font-weight: 400;
   font-size: 18px;
   color: var(--text-primary-color);
 }
 
-.top-section__input-children:focus {
+.top-section__input-children-room:focus {
   outline: none;
+}
+
+.top-section__form-room {
+  width: 33%;
+  position: relative;
 }
 
 .top-section__label-room {
@@ -368,24 +383,8 @@ body {
   font-size: 18px;
   color: var(--text-primary-color);
   position: absolute;
-  right: 24px;
+  left: 18px;
   top: 21px;
-}
-
-.top-section__input-room {
-  width: 33.33333%;
-  height: 64px;
-  border: none;
-}
-
-.top-section__input-room::placeholder {
-  font-weight: 400;
-  font-size: 18px;
-  color: var(--text-primary-color);
-}
-
-.top-section__input-room:focus {
-  outline: none;
 }
 
 .top-section__button {
@@ -428,7 +427,7 @@ body {
 .offer__highlight {
   width: 100px;
   height: 4px;
-  background-color: #f5bd41;
+  background-color: var(--accent-yellow);
   margin: 0 auto 80px;
   border-style: none;
 }
@@ -590,8 +589,8 @@ ul li:first-child {
   }
 
   .header__logo {
-    width: 150px;
-    height: 29px;
+    width: 168px;
+    height: 32px;
   }
 
   .header__stays {
@@ -606,10 +605,6 @@ ul li:first-child {
   .header__attractions {
     font-size: 18px;
   }
-
-  /*.header__night-account {*/
-  /*  gap: 16px;*/
-  /*}*/
 
   .header__night {
     width: 24px;
@@ -632,10 +627,10 @@ ul li:first-child {
   }
 
   .top-section__form {
-    max-width: 768px;
+    width: 100%;
     height: 232px;
-    background-color: #f5bd41;
-    border: 4px solid #f5bd41;
+    background-color: var(--accent-yellow);
+    border: 4px solid var(--accent-yellow);
     border-radius: 0;
     margin-bottom: 50px;
     flex-direction: column;
@@ -659,13 +654,17 @@ ul li:first-child {
     top: 20px;
   }
 
+  .top-section__input-destination:focus + label {
+    display: none;
+  }
+
   .top-section__input-destination {
     width: 100%;
     font-weight: 400;
     font-size: 18px;
     color: var(--text-primary-color);
     border-radius: 4px;
-    margin-left: 0;
+    padding-left: 36px;
   }
 
   .top-section__input-destination::placeholder {
@@ -682,6 +681,10 @@ ul li:first-child {
     display: none;
   }
 
+  .top-section__check-in {
+    width: 50%;
+  }
+
   .top-section__label-check-in {
     font-size: 12px;
     color: var(--text-primary-color);
@@ -696,10 +699,12 @@ ul li:first-child {
   }
 
   .top-section__input-check-in {
-    width: 50%;
+    width: 100%;
     height: 48px;
     border: none;
     border-radius: 4px;
+    padding-top: 24px;
+    padding-left: 8px;
   }
 
   .top-section__input-check-in::placeholder {
@@ -710,19 +715,26 @@ ul li:first-child {
     bottom: 6px;
   }
 
+  .top-section__check-out {
+    width: 50%;
+    position: relative;
+  }
+
   .top-section__label-check-out {
     font-size: 12px;
     color: var(--text-primary-color);
     position: absolute;
-    right: 293px;
+    left: 8px;
     top: 6px;
   }
 
   .top-section__input-check-out {
-    width: 50%;
+    width: 100%;
     height: 48px;
     border: none;
     border-radius: 4px;
+    padding-top: 24px;
+    padding-left: 8px;
   }
 
   .top-section__input-check-out::placeholder {
@@ -749,7 +761,7 @@ ul li:first-child {
   }
 
   .top-section__input-adults {
-    width: 33.33333%;
+    width: 34%;
     height: 48px;
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
@@ -762,39 +774,41 @@ ul li:first-child {
     font-size: 15px;
   }
 
-  .top-section__line-left {
+  .top-section__line {
     width: 1px;
     height: 32px;
     background-color: #bfbfbf;
     position: absolute;
-    left: 240px;
     top: 8px;
   }
 
-  .top-section__line-right {
-    width: 1px;
-    height: 32px;
-    background-color: #bfbfbf;
-    position: absolute;
-    right: 240px;
-    top: 8px;
+  .top-section__line--left {
+    left: 0;
+  }
+
+  .top-section__line--right {
+    right: 0;
   }
 
   .top-section__label-children {
     font-size: 12px;
     position: absolute;
-    left: 248px;
+    left: 8px;
     top: 6px;
   }
 
-  .top-section__input-children {
-    width: 33.33333%;
+  .top-section__form-room {
+    width: 33%;
+  }
+
+  .top-section__input-children-room {
+    width: 100%;
     height: 48px;
     padding-left: 8px;
     padding-top: 24px;
   }
 
-  .top-section__input-children::placeholder {
+  .top-section__input-children-room::placeholder {
     font-weight: 500;
     font-size: 15px;
   }
@@ -802,22 +816,13 @@ ul li:first-child {
   .top-section__label-room {
     font-size: 12px;
     position: absolute;
-    right: 198px;
+    left: 8px;
     top: 6px;
   }
 
-  .top-section__input-room {
-    width: 33.33333%;
-    height: 48px;
+  .top-section__input-children-room--border {
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;
-    padding-left: 8px;
-    padding-top: 24px;
-  }
-
-  .top-section__input-room::placeholder {
-    font-weight: 500;
-    font-size: 15px;
   }
 
   .top-section__button {
@@ -978,10 +983,10 @@ ul li:first-child {
   }
 
   .top-section__form {
-    max-width: 328px;
+    width: 100%;
     height: 232px;
-    background-color: #f5bd41;
-    border: 4px solid #f5bd41;
+    background-color: var(--accent-yellow);
+    border: 4px solid var(--accent-yellow);
     border-radius: 0;
     margin-bottom: 32px;
     flex-direction: column;
@@ -1042,7 +1047,7 @@ ul li:first-child {
   }
 
   .top-section__input-check-in {
-    width: 50%;
+    width: 100%;
     height: 48px;
     border: none;
     border-radius: 4px;
@@ -1060,12 +1065,12 @@ ul li:first-child {
     font-size: 12px;
     color: var(--text-primary-color);
     position: absolute;
-    right: 90px;
+    left: 8px;
     top: 6px;
   }
 
   .top-section__input-check-out {
-    width: 50%;
+    width: 100%;
     height: 48px;
     border: none;
     border-radius: 4px;
@@ -1089,13 +1094,10 @@ ul li:first-child {
 
   .top-section__label-adults {
     font-size: 12px;
-    position: absolute;
-    left: 8px;
-    top: 6px;
   }
 
   .top-section__input-adults {
-    width: 33.33333%;
+    width: 34%;
     height: 48px;
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
@@ -1108,62 +1110,29 @@ ul li:first-child {
     font-size: 15px;
   }
 
-  .top-section__line-left {
-    width: 1px;
-    height: 32px;
-    background-color: #bfbfbf;
-    position: absolute;
-    left: 104px;
-    top: 8px;
-  }
-
-  .top-section__line-right {
-    width: 1px;
-    height: 32px;
-    background-color: #bfbfbf;
-    position: absolute;
-    right: 104px;
-    top: 8px;
-  }
-
   .top-section__label-children {
     font-size: 12px;
-    position: absolute;
-    left: 112px;
-    top: 6px;
   }
 
-  .top-section__input-children {
-    width: 33.33333%;
+  .top-section__input-children-room {
+    width: 100%;
     height: 48px;
     padding-left: 8px;
     padding-top: 24px;
   }
 
-  .top-section__input-children::placeholder {
+  .top-section__input-children-room::placeholder {
     font-weight: 500;
     font-size: 15px;
   }
 
   .top-section__label-room {
     font-size: 12px;
-    position: absolute;
-    right: 65px;
-    top: 6px;
   }
 
-  .top-section__input-room {
-    width: 33.33333%;
-    height: 48px;
+  .top-section__input-children-room--border {
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;
-    padding-left: 8px;
-    padding-top: 24px;
-  }
-
-  .top-section__input-room::placeholder {
-    font-weight: 500;
-    font-size: 15px;
   }
 
   .top-section__button {

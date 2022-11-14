@@ -223,9 +223,6 @@
           <svg class="top-section__search-icon">
             <use href="#search-icon" />
           </svg>
-          <label for="destination" class="top-section__label-destination"
-            >Your destination or hotel name</label
-          >
           <input
             id="destination"
             class="top-section__input-destination"
@@ -233,28 +230,35 @@
             name="destination"
             placeholder="New York"
           />
+          <label for="destination" class="top-section__label-destination"
+          >Your destination or hotel name</label
+          >
           <div class="top-section__date">
-            <label for="check-in" class="top-section__label-check-in"
+            <div class="top-section__check-in">
+              <label for="check-in" class="top-section__label-check-in"
               >Check-in<span>—</span></label
-            >
-            <input
-              id="check-in"
-              class="top-section__input-check-in"
-              type="text"
-              name="date"
-              placeholder="Tue 15 Sept"
-            />
+              >
+              <input
+                      id="check-in"
+                      class="top-section__input-check-in"
+                      type="text"
+                      name="date"
+                      placeholder="Tue 15 Sept"
+              />
+            </div>
             <span class="top-section__input-date-dash">—</span>
-            <label for="check-out" class="top-section__label-check-out"
+            <div class="top-section__check-out">
+              <label for="check-out" class="top-section__label-check-out"
               >Check-out</label
-            >
-            <input
-              id="check-out"
-              class="top-section__input-check-out"
-              type="text"
-              name="date"
-              placeholder="Sat 19 Sept"
-            />
+              >
+              <input
+                      id="check-out"
+                      class="top-section__input-check-out"
+                      type="text"
+                      name="date"
+                      placeholder="Sat 19 Sept"
+              />
+            </div>
           </div>
           <div class="top-section__room">
             <label for="adults" class="top-section__label-adults">Adults</label>
@@ -265,28 +269,32 @@
               name="adults"
               placeholder="2"
             />
-            <div class="top-section__line-left"></div>
             <span class="top-section__input-room-dash">—</span>
-            <label for="children" class="top-section__label-children"
+            <div class="top-section__children">
+              <div class="top-section__line top-section__line--left"></div>
+              <label for="children" class="top-section__label-children"
               >Children</label
-            >
-            <input
-              id="children"
-              class="top-section__input-children"
-              type="text"
-              name="children"
-              placeholder="0"
-            />
-            <div class="top-section__line-right"></div>
+              >
+              <input
+                      id="children"
+                      class="top-section__input-children-room"
+                      type="text"
+                      name="children"
+                      placeholder="0"
+              />
+              <div class="top-section__line top-section__line--right"></div>
+            </div>
             <span class="top-section__input-room-dash">—</span>
-            <label for="room" class="top-section__label-room">Room</label>
-            <input
-              id="room"
-              class="top-section__input-room"
-              type="text"
-              name="room"
-              placeholder="1"
-            />
+            <div class="top-section__form-room">
+              <label for="room" class="top-section__label-room">Room</label>
+              <input
+                      id="room"
+                      class="top-section__input-children-room top-section__input-children-room--border"
+                      type="text"
+                      name="room"
+                      placeholder="1"
+              />
+            </div>
           </div>
           <button class="top-section__button">Search</button>
         </form>
