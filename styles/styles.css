@@ -235,6 +235,9 @@ body {
 
 .top-section__label-check-in span {
   padding: 0 6px;
+  position: absolute;
+  top: 0;
+  right: -30px;
 }
 
 .top-section__input-check-in {
@@ -268,7 +271,7 @@ body {
   color: var(--text-secondary-color);
   position: absolute;
   top: -40px;
-  left: -8px;
+  left: -28px;
 }
 
 .top-section__input-check-out {
@@ -932,6 +935,7 @@ ul li:first-child {
   }
 
   .top-section {
+    width: 100%;
     background-size: cover;
     background-position: top right;
   }
