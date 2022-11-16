@@ -935,6 +935,7 @@ ul li:first-child {
   }
 
   .top-section {
+    min-width: 0;
     width: 100%;
     background-size: cover;
     background-position: top right;
