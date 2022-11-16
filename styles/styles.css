@@ -122,22 +122,27 @@ body {
   font-weight: 400;
   font-size: 24px;
   color: var(--text-secondary-color);
-}
-
-.header__stays-line {
-  width: 50px;
-  height: 4px;
-  background-color: var(--accent-yellow);
-  border-style: none;
-  position: absolute;
-  left: 5px;
-  bottom: -6px;
+  position: relative;
 }
 
 .header__attractions {
   font-weight: 400;
   font-size: 24px;
   color: var(--text-secondary-color);
+  position: relative;
+}
+
+.header__hover-line:hover::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 4px;
+  background-color: var(--accent-yellow);
+  border-style: none;
+  position: absolute;
+  left: 50%;
+  bottom: -12px;
+  transform: translate(-50%);
 }
 
 .header__night-account {
@@ -420,19 +425,25 @@ body {
 
 .offer__title {
   margin-top: 120px;
-  margin-bottom: 20px;
+  margin-bottom: 104px;
   text-align: center;
   font-size: 40px;
   font-weight: 500;
   color: var(--text-primary-color);
+  position: relative;
 }
 
-.offer__highlight {
+.offer__title:after {
+  content: "";
+  display: block;
   width: 100px;
   height: 4px;
   background-color: var(--accent-yellow);
-  margin: 0 auto 80px;
   border-style: none;
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translate(-50%);
 }
 
 .offer__icons {
@@ -481,6 +492,81 @@ body {
   font-size: 24px;
   font-weight: 400;
   color: var(--text-primary-color);
+}
+
+.homes {
+  background-color: #eaf0f9;
+}
+
+.homes__title {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 118%;
+  color: var(--text-primary-color);
+  text-align: center;
+  padding-top: 120px;
+  margin-bottom: 105px;
+}
+
+.homes__hotels {
+  display: flex;
+  position: relative;
+}
+
+.homes__hotels-image {
+  width: 100%;
+  height: 296px;
+}
+
+.homes__hotels-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.homes__hotel-block:first-child {
+  padding-left: 0;
+}
+
+.homes__hotel-block:last-child {
+  padding-right: 0;
+}
+
+.homes__hotel-name {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 117%;
+  color: #3077c6;
+  margin: 24px 0;
+}
+
+.homes__hotel-location {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 117%;
+  color: #bfbfbf;
+  padding-bottom: 120px;
+}
+
+.homes__circle-arrow {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #f3f3f4;
+  box-shadow: 0 2px 5px rgba(56, 56, 56, 50);
+  position: absolute;
+  top: 128px;
+  right: -10px;
+}
+
+.homes__arrow {
+  width: 13px;
+  height: 13px;
+  border: 2px solid var(--text-primary-color);
+  border-left: 0;
+  border-top: 0;
+  border-bottom-right-radius: 2px;
+  transform: rotate(-45deg) skew(-10deg, -5deg) translate(15%, 135%);
 }
 
 .footer {
@@ -600,13 +686,21 @@ ul li:first-child {
     font-size: 18px;
   }
 
-  .header__stays-line {
-    width: 35px;
-    height: 3px;
-  }
-
   .header__attractions {
     font-size: 18px;
+  }
+
+  .header__hover-line:hover::after {
+    content: "";
+    display: block;
+    width: 35px;
+    height: 3px;
+    background-color: var(--accent-yellow);
+    border-style: none;
+    position: absolute;
+    left: 50%;
+    bottom: -12px;
+    transform: translate(-50%);
   }
 
   .header__night {
@@ -848,10 +942,6 @@ ul li:first-child {
     font-size: 32px;
   }
 
-  .offer__highlight {
-    margin: 0 auto 50px;
-  }
-
   .offer__icons {
     margin-bottom: 56px;
   }
@@ -862,6 +952,39 @@ ul li:first-child {
 
   .offer__icon-block--text {
     font-size: 20px;
+  }
+
+  .homes__hotels .homes__hotel-block:nth-last-child(-n + 3) {
+    display: none;
+  }
+
+  .homes__title {
+    font-size: 32px;
+    line-height: 118%;
+    padding-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .homes__hotels-image {
+    height: 324px;
+  }
+
+  .homes__hotel-name {
+    font-size: 18px;
+    line-height: 117%;
+    margin-top: 18px;
+    margin-bottom: 18px;
+  }
+
+  .homes__hotel-location {
+    font-size: 18px;
+    line-height: 117%;
+    padding-bottom: 50px;
+  }
+
+  .homes__circle-arrow {
+    top: 148px;
+    right: -10px;
   }
 
   .footer__footer-logo {
@@ -956,10 +1079,6 @@ ul li:first-child {
   }
 
   .header__stays {
-    display: none;
-  }
-
-  .header__stays-line {
     display: none;
   }
 
@@ -1161,10 +1280,6 @@ ul li:first-child {
     font-size: 28px;
   }
 
-  .offer__highlight {
-    display: none;
-  }
-
   .offer__icons {
     justify-content: center;
     margin-bottom: 8px;
@@ -1202,6 +1317,47 @@ ul li:first-child {
 
   .offer__icon-block--text {
     font-size: 15px;
+  }
+
+  .homes__hotels .homes__hotel-block:nth-last-child(-n + 3) {
+    display: none;
+  }
+
+  .homes__title {
+    font-size: 28px;
+    line-height: 118%;
+    padding-top: 40px;
+    margin-bottom: 32px;
+  }
+
+  .homes__hotels-image {
+    height: 155px;
+  }
+
+  .homes__hotel-name {
+    font-size: 12px;
+    line-height: 117%;
+    margin-top: 8px;
+    margin-bottom: 4px;
+  }
+
+  .homes__hotel-location {
+    font-size: 12px;
+    line-height: 117%;
+    padding-bottom: 40px;
+  }
+
+  .homes__circle-arrow {
+    width: 28px;
+    height: 28px;
+    top: 58px;
+    right: -5px;
+  }
+
+  .homes__arrow {
+    width: 10px;
+    height: 10px;
+    transform: rotate(-45deg) skew(-10deg, -5deg) translate(10%, 120%);
   }
 
   .footer__footer-logo {
