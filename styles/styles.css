@@ -1,4 +1,5 @@
 @import url("./fonts.css");
+@import url("/node_modules/flag-icons/css/flag-icons.min.css");
 
 :root {
   --text-primary-color: #383838;
@@ -9,6 +10,7 @@
   --accent-yellow: #f5bd41;
   --general-blue: #10367c;
   --accent-blue: #3077c6;
+  --dark-gray: #333333;
 
   --col-width: calc(100% / 12);
 }
@@ -71,8 +73,8 @@ body {
 }
 
 [class*="col-"] {
-  padding-left: 8px;
-  padding-right: 8px;
+  margin-left: 8px;
+  margin-right: 8px;
 }
 
 .svg-sprite {
@@ -572,6 +574,165 @@ body {
   transform: rotate(-45deg) skew(-10deg, -5deg) translate(15%, 135%);
 }
 
+.reviews__title {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 117%;
+  color: var(--text-primary-color);
+  text-align: center;
+  padding-top: 120px;
+  margin-bottom: 112px;
+}
+
+.reviews__blocks {
+  display: flex;
+  margin-bottom: 120px;
+  position: relative;
+}
+
+.reviews__review-block {
+  background-color: var(--background-color);
+  padding-bottom: 24px;
+}
+
+.reviews__img {
+  width: 100%;
+  height: 400px;
+  margin-bottom: 24px;
+  position: relative;
+}
+
+.reviews__price {
+  width: 100%;
+  height: 48px;
+  background-color: rgba(56, 56, 56, 0.7);
+  padding: 16px 24px 11px;
+  position: absolute;
+  bottom: 0;
+}
+
+.reviews__price > p {
+  font-weight: 400;
+  font-size: 18px;
+  color: var(--text-general-white);
+}
+
+.reviews__price span {
+  font-weight: 500;
+}
+
+.reviews__review-block:first-child {
+  margin-left: 0;
+}
+
+.reviews__review-block:last-child {
+  margin-right: 0;
+}
+
+.reviews__hotel {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 24px 29px;
+}
+
+.reviews__hotel-name {
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--accent-blue);
+  margin-bottom: 16px;
+}
+
+.reviews__hotel-location {
+  font-weight: 400;
+  font-size: 18px;
+  color: var(--accent-blue);
+}
+
+.reviews__rating {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.reviews__score {
+  width: 48px;
+  height: 32px;
+  background-color: var(--general-blue);
+  border-radius: 8px;
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reviews__score > span {
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--text-general-white);
+}
+
+.reviews__amount {
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--text-secondary-color);
+}
+
+.reviews__name {
+  display: flex;
+  align-items: center;
+  gap: 21px;
+  margin: 0 29px 22px;
+}
+
+.reviews__user-logo {
+  width: 53px;
+  height: 53px;
+}
+
+.reviews__user-name {
+  font-weight: 400;
+  font-size: 18px;
+  color: var(--text-primary-color);
+  margin-bottom: 8px;
+}
+
+.reviews__country {
+  font-weight: 400;
+  font-size: 18px;
+  color: var(--text-secondary-color);
+}
+
+.reviews__text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 117%;
+  color: var(--text-primary-color);
+  margin: 0 24px;
+}
+
+.reviews__circle-arrow {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--stroke-color);
+  box-shadow: 0 2px 5px rgba(56, 56, 56, 50);
+  position: absolute;
+  top: 180px;
+  right: -20px;
+}
+
+.reviews__arrow {
+  width: 13px;
+  height: 13px;
+  border: 2px solid var(--text-primary-color);
+  border-left: 0;
+  border-top: 0;
+  border-bottom-right-radius: 2px;
+  transform: rotate(-45deg) skew(-10deg, -5deg) translate(15%, 135%);
+}
+
 .footer {
   background-color: var(--general-blue);
 }
@@ -988,6 +1149,45 @@ ul li:first-child {
     right: -10px;
   }
 
+  .reviews__title {
+    font-size: 32px;
+    color: var(--text-primary-color);
+    padding-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .reviews__blocks {
+    margin-bottom: 50px;
+  }
+
+  .reviews__review-block {
+    padding-bottom: 24px;
+  }
+
+  .reviews__blocks .reviews__review-block:nth-child(2) {
+    margin-right: 0;
+  }
+
+  .reviews__blocks .reviews__review-block:nth-child(3) {
+    display: none;
+  }
+
+  .reviews__img {
+    width: 100%;
+    height: 350px;
+    margin-bottom: 24px;
+  }
+
+  .reviews__img img {
+    width: 100%;
+    height: 350px;
+  }
+
+  .reviews__circle-arrow {
+    top: 22%;
+    right: -20px;
+  }
+
   .footer__footer-logo {
     display: flex;
     justify-content: center;
@@ -1357,6 +1557,129 @@ ul li:first-child {
     width: 10px;
     height: 10px;
     transform: rotate(-45deg) skew(-10deg, -5deg) translate(10%, 120%);
+  }
+
+  .reviews {
+    background-color: var(--background-color);
+  }
+
+  .reviews__title {
+    font-size: 28px;
+    padding-top: 40px;
+    margin-bottom: 32px;
+  }
+
+  .reviews__blocks {
+    margin-bottom: 0;
+  }
+
+  .reviews__review-block {
+    background-color: var(--background-color);
+    padding-bottom: 0;
+  }
+
+  .reviews__img {
+    width: 100%;
+    height: 325px;
+    margin-bottom: 12px;
+  }
+
+  .reviews__img img {
+    width: 100%;
+    height: 325px;
+  }
+
+  .reviews__price {
+    display: none;
+  }
+
+  .reviews__review-block:first-child {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .reviews__blocks .reviews__review-block:nth-last-child(-n + 3) {
+    display: none;
+  }
+
+  .reviews__hotel {
+    margin: 0;
+    padding-bottom: 16px;
+  }
+
+  .reviews__hotel-name {
+    font-size: 15px;
+    margin-bottom: 8px;
+  }
+
+  .reviews__hotel-location {
+    font-size: 15px;
+  }
+
+  .reviews__score {
+    width: 39px;
+    height: 26px;
+    margin-bottom: 5px;
+  }
+
+  .reviews__score > span {
+    font-size: 15px;
+  }
+
+  .reviews__amount {
+    font-size: 12px;
+  }
+
+  .reviews__name {
+    gap: 13px;
+    margin: 0;
+    padding-bottom: 21px;
+  }
+
+  .reviews__user-logo {
+    width: 44px;
+    height: 44px;
+  }
+
+  .reviews__user-name {
+    font-size: 15px;
+    margin-bottom: 4px;
+  }
+
+  .reviews__country {
+    font-size: 15px;
+  }
+
+  .reviews__text {
+    font-size: 15px;
+    margin: 0;
+    padding-bottom: 32px;
+  }
+
+  .reviews__circle-arrow {
+    display: none;
+  }
+
+  .reviews__paginator {
+    display: flex;
+    gap: 8px;
+    max-width: 56px;
+    margin: 0 auto;
+    padding-bottom: 40px;
+  }
+
+  .reviews__paginator-fill {
+    width: 8px;
+    height: 8px;
+    background-color: var(--dark-gray);
+    border-radius: 50%;
+  }
+
+  .reviews__paginator-empty {
+    width: 8px;
+    height: 8px;
+    border: 1px solid var(--dark-gray);
+    border-radius: 50%;
   }
 
   .footer__footer-logo {
