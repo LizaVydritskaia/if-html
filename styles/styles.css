@@ -98,6 +98,7 @@ body {
   background-image: url("../images/background-castelmezzano.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
+  order: 0;
 }
 
 .header {
@@ -171,6 +172,7 @@ body {
   display: flex;
   gap: 24px;
   align-items: center;
+  position: relative;
 }
 
 .header__night {
@@ -186,6 +188,7 @@ body {
 .header__menu {
   width: 0;
   height: 0;
+  position: absolute;
 }
 
 .top-section__title {
@@ -445,6 +448,10 @@ body {
   height: 40px;
 }
 
+.offer {
+  order: 1;
+}
+
 .offer__title {
   margin-top: 120px;
   margin-bottom: 104px;
@@ -525,6 +532,7 @@ body {
 
 .homes {
   background-color: var(--background-color);
+  order: 2;
 }
 
 .homes__title {
@@ -593,6 +601,10 @@ body {
   border-top: 0;
   border-bottom-right-radius: 2px;
   transform: rotate(-45deg) skew(-10deg, -5deg) translate(15%, 135%);
+}
+
+.destinations {
+  order: 3;
 }
 
 .destinations__title {
@@ -744,6 +756,7 @@ body {
   display: flex;
   align-items: center;
   position: relative;
+  order: 4;
 }
 
 .sign-up__circle {
@@ -803,6 +816,10 @@ body {
 
 .sign-up__install {
   opacity: 0;
+}
+
+.reviews {
+  order: 5;
 }
 
 .reviews__title {
@@ -972,6 +989,7 @@ body {
 
 .footer {
   background-color: var(--general-blue);
+  order: 6;
 }
 
 .footer__footer-logo {
@@ -981,6 +999,14 @@ body {
 .footer__lists {
   display: flex;
   padding-top: 120px;
+}
+
+.footer__lists ul:nth-child(1) {
+  margin-left: 0;
+}
+
+.footer__lists ul:nth-child(2) {
+  margin-right: 0;
 }
 
 .footer__lists ul {
@@ -1344,8 +1370,18 @@ ul li:first-child {
   }
 
   .offer__icons {
-    margin-bottom: 56px;
+    margin-bottom: 10px;
     flex-wrap: wrap;
+  }
+
+  .offer__icons .offer__icon-block:nth-child(even) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .offer__icons .offer__icon-block:nth-child(odd) {
+    margin-left: 0;
+    margin-right: 0;
   }
 
   .offer__icon-block {
@@ -1354,6 +1390,10 @@ ul li:first-child {
 
   .offer__icon-block--text {
     font-size: 20px;
+  }
+
+  .homes__hotels .homes__hotel-block:nth-child(2) {
+    margin-right: 0;
   }
 
   .homes__hotels .homes__hotel-block:nth-last-child(-n + 3) {
@@ -1384,7 +1424,7 @@ ul li:first-child {
 
   .homes__circle-arrow {
     top: 148px;
-    right: -10px;
+    right: -20px;
   }
 
   .destinations {
@@ -1928,6 +1968,7 @@ ul li:first-child {
     align-items: center;
     background-color: var(--text-general-white);
     padding: 24px 16px;
+    order: 5;
   }
 
   .sign-up__mobile-logo {
@@ -1985,6 +2026,7 @@ ul li:first-child {
 
   .reviews {
     background-color: var(--background-color);
+    order: 4;
   }
 
   .reviews__title {
