@@ -93,6 +93,11 @@ body {
   padding-top: 202px;
 }
 
+.main-content {
+display: flex;
+  flex-direction: column;
+}
+
 .top-section {
   background-image: url("../images/background-castelmezzano.jpg");
   background-repeat: no-repeat;
@@ -112,7 +117,7 @@ body {
   height: 40px;
 }
 
-.header__items {
+.header__nav {
   display: flex;
   gap: 48px;
 }
@@ -448,6 +453,7 @@ body {
 }
 
 .offer {
+  width: 100%;
   order: 1;
 }
 
@@ -735,6 +741,7 @@ body {
 }
 
 .sign-up {
+  width: 100%;
   max-width: 1232px;
   background-color: var(--background-color);
   padding: 51px 24px 52px;
