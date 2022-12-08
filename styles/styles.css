@@ -94,7 +94,7 @@ body {
 }
 
 .main-content {
-display: flex;
+  display: flex;
   flex-direction: column;
 }
 
