@@ -19,5 +19,6 @@
   "homepage": "https://github.com/LizaVydritskaia/if-html#readme",
   "devDependencies": {
     "prettier": "2.7.1"
-  }
+  },
+  "dependencies": {}
 }
